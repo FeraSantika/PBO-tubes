@@ -32,7 +32,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 
 @PageTitle("Biodata")
-@RouteAlias(value = "", layout = MainLayout.class)
+@RouteAlias(value = "biodata", layout = MainLayout.class)
 @Route(value = "biodata/:biodataID?/:action?(edit)", layout = MainLayout.class)
 @Uses(Icon.class)
 public class BiodataView extends Div implements BeforeEnterObserver {

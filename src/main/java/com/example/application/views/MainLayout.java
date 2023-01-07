@@ -4,6 +4,7 @@ import com.example.application.components.appnav.AppNav;
 import com.example.application.components.appnav.AppNavItem;
 import com.example.application.data.entity.User;
 import com.example.application.security.AuthenticatedUser;
+import com.example.application.views.biodata.BiodataView;
 import com.example.application.views.home.HomeView;
 import com.example.application.views.laporan.LaporanView;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -76,6 +77,11 @@ public class MainLayout extends AppLayout {
         }
         if (accessChecker.hasAccess(LaporanView.class)) {
             nav.addItem(new AppNavItem("Laporan", LaporanView.class, "las la-file-alt"));
+
+        }
+
+        if (accessChecker.hasAccess(BiodataView.class)) {
+            nav.addItem(new AppNavItem("Biodata Sadari", BiodataView.class, "las la-file-alt"));
 
         }
 
