@@ -1,6 +1,9 @@
 package com.example.application.views.home;
 
 import com.example.application.views.MainLayout;
+import com.vaadin.flow.component.charts.model.DataSeries;
+import com.vaadin.flow.component.charts.model.DataSeriesItem;
+import com.vaadin.flow.component.charts.model.PlotOptionsPie;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
@@ -17,17 +20,17 @@ public class HomeView extends VerticalLayout {
     public HomeView() {
         setSpacing(false);
 
-        Image img = new Image("images/empty-plant.png", "placeholder plant");
-        img.setWidth("200px");
+//        add(new H2("GoSADARI ayo periksa sedini mungkin"));
+        Image img = new Image("images/hasil kuisioner (6).png", "placeholder plant");
+        img.setWidth("900px");
         add(img);
-
-        add(new H2("This place intentionally left empty"));
-        add(new Paragraph("It’s a place where you can grow your own UI 🤗"));
+//        add(new Paragraph("Selamat datang, lakukan SADARI minimal sebulan sekali🤗"));
 
         setSizeFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         getStyle().set("text-align", "center");
     }
+
 
 }

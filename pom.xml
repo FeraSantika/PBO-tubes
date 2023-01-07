@@ -49,6 +49,11 @@
         </repository>
     </repositories>
 
+    <repository>
+        <id>vaadin-addons</id>
+        <url>https://maven.vaadin.com/vaadin-addons</url>
+    </repository>
+
     <pluginRepositories>
         <!-- The order of definitions matters. Explicitly defining central here to make sure it has the highest priority. -->
         <pluginRepository>
@@ -94,8 +99,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
 
@@ -140,6 +145,11 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.1.1</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-charts-flow</artifactId>
         </dependency>
     </dependencies>
 

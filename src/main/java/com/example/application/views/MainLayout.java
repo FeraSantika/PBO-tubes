@@ -70,12 +70,12 @@ public class MainLayout extends AppLayout {
         // For documentation, visit https://github.com/vaadin/vcf-nav#readme
         AppNav nav = new AppNav();
 
-        if (accessChecker.hasAccess(LaporanView.class)) {
-            nav.addItem(new AppNavItem("Laporan", LaporanView.class, "la la-columns"));
+        if (accessChecker.hasAccess(HomeView.class)) {
+            nav.addItem(new AppNavItem("Home", HomeView.class, "las la-home"));
 
         }
-        if (accessChecker.hasAccess(HomeView.class)) {
-            nav.addItem(new AppNavItem("Home", HomeView.class, "la la-file"));
+        if (accessChecker.hasAccess(LaporanView.class)) {
+            nav.addItem(new AppNavItem("Laporan", LaporanView.class, "las la-file-alt"));
 
         }
 
