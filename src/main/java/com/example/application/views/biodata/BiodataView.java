@@ -31,10 +31,13 @@ import java.util.Optional;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 
+import javax.annotation.security.RolesAllowed;
+
 @PageTitle("Biodata")
 @RouteAlias(value = "biodata", layout = MainLayout.class)
 @Route(value = "biodata/:biodataID?/:action?(edit)", layout = MainLayout.class)
 @Uses(Icon.class)
+@RolesAllowed("ADMIN")
 public class BiodataView extends Div implements BeforeEnterObserver {
 
     private final String BIODATA_ID = "biodataID";
@@ -165,10 +168,10 @@ public class BiodataView extends Div implements BeforeEnterObserver {
 
     private void createEditorLayout(SplitLayout splitLayout) {
         Div editorLayoutDiv = new Div();
-        editorLayoutDiv.setClassName("editor-layout");
+        editorLayoutDiv.setClassName("editor-layout-2");
 
         Div editorDiv = new Div();
-        editorDiv.setClassName("editor");
+        editorDiv.setClassName("editor-2");
         editorLayoutDiv.add(editorDiv);
 
         FormLayout formLayout = new FormLayout();

@@ -77,13 +77,13 @@ public class MainLayout extends AppLayout {
         }
         if (accessChecker.hasAccess(LaporanView.class)) {
             nav.addItem(new AppNavItem("Laporan", LaporanView.class, "las la-file-alt"));
-
-        }
-
-        if (accessChecker.hasAccess(BiodataView.class)) {
             nav.addItem(new AppNavItem("Biodata Sadari", BiodataView.class, "las la-file-alt"));
 
         }
+
+//        if (accessChecker.hasAccess(BiodataView.class)) {
+//
+//        }
 
         return nav;
     }
